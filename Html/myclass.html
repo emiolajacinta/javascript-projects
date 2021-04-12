@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT CLASS</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../CSS/my.css">
+</head>
+<body class="bg-secondary" >
+      <div class="card card-body-sm mycard mx-auto border border-light mt-5 p-4">
+        <h1 class=" text-center">CURRENCY CONVERTER</h1>
+          <div class="form-group m-3">
+              <label for="">Amount</label>
+              <input class="form-control" type="email" placeholder=" Input Length" name="kosi" id="input1">
+          </div>
+            <div class="m-3 mb-2">
+                <label for="">From</label>
+                <select name="" id="myselect1" class="form-control">
+                    <option value="">Length</option>
+                    <option  value="metre">Metre(m)</option>
+                    <option  value="kilo">Kilometre(km)</option>
+                </select>
+
+            </div>
+            <div  class="mb-2 m-3">
+                <label for="">To</label>
+                <select name="" id="myselect2" class="form-control">
+                    <option value="">Length</option>
+                    <option  value="metre">Metre(m)</option>
+                    <option  value="kilo">Kilometre(km)</option>
+                </select>
+            </div>
+        
+            <div class="mb-3 m-3">
+                <input id="input2" class="form-control" type="text" placeholder="Ans=">
+            </div>
+      
+        <button onclick="kosi()"class="mybutton mx-auto">Convert now</button>
+
+        <script>
+            function kosi() {
+            var a = myselect1.value
+            var b = myselect2.value
+            var c = Number(input1.value)
+            var d = Number (input2.value)
+
+
+            if (a == 'metre' && b=='kilo'){
+                d = c * 1000 + 'km' 
+                input2.value = d
+            }
+            else if(a =='metre' && b =='kilo'){
+                 d=  c/1000 + 'm'
+                 input2.value=d
+            }
+            else if(a =='metre' && b =='kilo'){
+                 d= c*1000 + 'km'
+                 input2.value=d
+            }
+            else if(a == 'kilo' && b =='metre'){
+                 d=c/1000 +'m'
+                 input2.value=d
+            }
+        }
+        </script>
+    
+      </div>
+   
+
+    
+    <!-- // <script type="text/javascript" src="../js/myclass.js"></script>
+    // <script>
+//         var firstName="KOSISOCHUKWU";
+//         alert(firstName)
+//          Second_name="EMIOLA"
+//           alert(Second_name)
+
+//                  var fruits=["mango","pawpaw","orange"]
+//                   alert(fruits[0]="banana")
+//                   alert(fruits[1])
+//                 var a=20;
+//                 var b=10;
+//                 var c=100
+               
+//                 console.log(ans)
+//                 if(a!=b){
+//                     console.log("HEY!111 I AM KOSI")
+//                 }
+//                 if(a==20){
+//                     console.log("HEY I AM KOFO")
+//                 }
+//                var b=40
+
+//                if(b==40){
+//                    console.log ("I NEED MONEY")
+//                }
+//                if(b>=40){
+//                    console.log("I MISS MY LATE MUM")
+//                }
+//                if(b,40){
+//                    console.log("MERCY PLS COME BACK HOME")
+//                }
+//                if(b!=40){
+//                    console.log("REST IN PERFECT PEACE TO THOSE WHO LEFT US BEHIND")
+//                }
+//                if(b<=40){
+//                    console.log("DEATH IS INEVITABLE")
+//                }
+//                const myHeading = document.querySelector('h1');
+// myHeading.textContent = 'Hello world!';
+                // var a= true
+                // a= Number(a)
+                // console.log(typeof a, a)
+
+                // function kosi(number1,number2,sign){
+                //     var result
+                //        if(sign=="+"){
+                //          result=number1+number2
+                //        }
+                //        else if(sign=="-"){
+                //          result=number2-number1
+                //        }
+                //        else if(sign=="*"){
+                //          result=number1 * number2
+                //        }
+                //        else if(sign=="/"){
+                //          result=number2/number1
+                //        } 
+                //        else{
+                //          result=Invalid  
+                //        }
+                //        console.log(result)
+                //     }
+                   
+                  
+                // kosi(10,20,"/")
+
+                 //     X=5;
+                    //     Y=10;
+                    //     Z=X*Y
+                    //     return Z 
+                    // } 
+                    // var k = (kosi())
+                    // console.log(k) 
+                      
+                // function kosi(){
+                //     var a = input1.value;
+                //     var b = myselect1.value;
+                //     var c = myselect2.value;
+
+                //     alert(a)
+                 
+                    // var d = document.getElementById('mynaira').value=1
+                    // var e = document.getElementById('input2')=d
+
+                   
+//                     if(a =='usd'){
+//                         ans = a*380;
+//                          alert(ans)
+// \
+                                               
+                    // }
+                    // else if(from=='NGN'){
+                    //     ans=a*1
+                    
+                   
+                
+                // {
+                //        var a = input1.value
+                //           a = Number(a)
+                //        var b = input2.value
+                //          b= Number(b)
+                //        var c = document.getElementById('input3').value; 
+                              -->
+
+                //    var result
+                //      if(c =="+"){
+                //          result= a+b
+                //      }
+                //      else if( c =="-"){
+                //          result=a-b
+                //      }
+                //       else if(c =='/'){
+                //          result=a/b
+                //      }
+                //       else if(c =='%'){
+                //          result=a%b
+                //      }
+                // //    console.log(result)
+                //    document.getElementById('BBY').innerText=result
+                // } 
+           
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

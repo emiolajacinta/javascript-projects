@@ -1,0 +1,43 @@
+tr, td{
+    border: 1px solid white;
+    border-collapse: collapse;
+    padding: 5px;
+    
+}
+td{
+    background-color: black;
+    color: white;
+    
+}
+.mytext{
+    color: white;
+ }
+.div1{
+    background-color:black;
+    margin-left: auto;
+    margin-right: auto;
+    width:400px;
+    height: 40px;
+    border: 1px solid white !important;
+}
+#btn{
+     background-color: black;
+    color: white;
+
+}
+ #btn:focus{
+     outline: none;
+ }
+.mydigit{
+        background-color:lightgrey;
+        margin-top: 50px;
+        padding: 20px;
+        /* border: none; */
+        width: 398px;
+}
+
+button{
+    border: none; 
+    width: 80px;
+    height: 60px;
+}

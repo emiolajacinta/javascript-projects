@@ -1,0 +1,36 @@
+.mybutton:focus{
+     border: none;
+     outline:none;
+     box-shadow: 0px 0px 0px 0px ;
+}
+.mybutton{
+    width:350px;
+    height:60px;
+    border-radius:50px;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+   
+}
+input, input{
+     border-radius: 50px !important;
+}
+h1{
+    color: rgb(81, 81, 133) !important;
+}
+
+.mycard{
+     width: 550px;
+     height: 540px;
+     border-radius: 20px;
+     box-shadow: 0px 0px 20px 0px;
+}
+/* input{
+    width: 350px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-left:40px;
+    margin-top: 40px;
+} */

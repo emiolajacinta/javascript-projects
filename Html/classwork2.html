@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classwork2</title>
+    <link rel="stylesheet" href="../CSS/classwork2.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="bg-light">
+    <div class=" mycard card-body mx-auto my-5" id="div">
+            <div class="media mymedia border-secondary shadow mx-auto">
+                <img class="tems ml-4 mt-4" src="../download.jpg" alt="" id="imgg">
+                <div class="media-body mx-3">
+                    <div class="mt-4 ml-3">
+                            <p class="m-0"style="font-size: 20px">Tems</p>
+                            <span class="font-weight-bold" style="font-size: 22px;">Damages</span><br>
+                            <span style="color: red;" class=" font-weight-bold" style="font-size: 20px"  id="font1">Feat.</span>
+                            <span>Zoro,Wizkid</span><br>
+                            <span class="font-weight-bold"  style="font-size: 22px;">Released</span>
+                            <span>:November 7,2020</span>
+                    </div>
+                    <div class="ml-3 mt-1">
+                            <button class="btn1 px-2"><i class="fa fa-play" id="font2"></i>120.2k</button>
+                            <button class="btn1 px-2"><i class="fa fa-heart"id="font3"></i>120.2k</button>
+                            <button class="btn1 px-2"><i class="fa fa-comment"id="font4"></i>120.2k</button>
+                            <button class="btn1 px-2"><i class="fa fa-download"id="font5"></i>120.2k</button>
+                    </div>
+                </div> 
+                 
+            </div>
+            <!-- <button class="btn2"id="font5"><i class="fa fa-play fa-1x text-white" ></i></button>  -->
+                
+    </div>
+         <div class="mx-auto mytext">
+             <span><input onclick="set()" type="checkbox" name="" id="font7"> Use Cover as background</span>
+             <input class="float-right" onchange="getcolor()" type="color" name="" id="mycolor">
+             <span class="float-right"><input  onclick="hide()" type="checkbox" name="" id="font6">Customize Color ? </span>
+            
+         </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper
+
+
+
+
+.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   <script>
+      
+      function getcolor(){
+          var a = mycolor.value;
+            font1.style.color = a
+            font2.style.color = a
+            font3.style.color = a
+            font4.style.color = a
+            font5.style.color = a
+            font6.style.color = a
+            font7.style.color = a
+            font8.style.color = a
+         
+      }
+       function set(){
+          f7 = document.getElementById('font7').checked;
+          div_img = document.getElementById('div');
+          bg = document.getElementById('imgg').src;
+           if(f7){
+               div_img.style.backgroundImage = "url(" + bg + ")";
+            }
+            else{
+                div_img.style.backgroundImage = "none";
+                div_img.style.backgroundSize = "cover";
+            }
+           }
+         function hide(){
+           f6 = document.getElementById('font6').checked;
+           if (f6 == true){
+               var a = document.getElementById('mycolor');
+               a.setAttribute('style','display:inline');
+           }
+           else if ( f6 == false){
+            var a = document.getElementById('mycolor');
+               a.setAttribute('style','display:none');
+           }
+         }   
+          
+   </script>
+
+</html>

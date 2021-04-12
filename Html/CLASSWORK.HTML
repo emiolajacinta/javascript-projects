@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classwork</title>
+    <link rel="stylesheet" href="../CSS/leisuretimework.css">
+    <link rel="stylesheet" href="BOOSTRAP/bootstrap.css">
+    <link rel="stylesheet" href="BOOSTRAP/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../CSS/classwork.css">
+</head>
+
+<body class="bg-secondary">
+    <div class="div1 card card-body bg-white  mx-auto my-5 ">
+        <div class=" subdiv1 d-flex mt-5">
+            <button id="btnn" onclick="signin1()" class="btn btn-danger w-50 h-50 py-2 font-weight-bold">Sign in</button>
+            <button id="btnu" onclick="signup2()" class="btn btn-default w-50 py-2">Sign up</button>
+        </div>
+        <hr>
+        <div id="signin" class="card border-white">
+            <div class="mx-auto">
+                <img class="myimage" src="../download.jpg" alt="">
+                <span class=" font-weight-bold mx-2 imgtext">Sign in</span>
+            </div>
+            <div>
+                <label for="" class="mylabel">Email</label>
+                <input type="text" class="form-control my-2">
+                <label for="" class="mylabel">Password</label>
+                <input type="text" class="form-control my-2">
+            </div>
+            <div>
+                <span class="myp">Forgot your password?</span>
+            </div>
+            <div class="my-2">
+                <button class="btn2">Sign in <i class="fa fa-arrow-right"></i></button>
+            </div>
+            <hr>
+
+        </div>
+        <!-- MY SIGN UP PAGE -->
+        <div id="signup" class=" border-white d-none">
+            <div class="" style="margin-left: 145px;">
+                <img class="myimage" src="../download.jpg" alt="">
+                <span class=" font-weight-bold mx-2 imgtext">Sign Up</span>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <p class="myp2 font-weight-bold">Stage Name</p>
+                    <input class="form-control" type="text">
+                </div>
+                <div class="col-sm">
+                    <p class="myp2">Email</p>
+                    <input class="form-control" type="text">
+                </div>
+
+            </div>
+            <div class="row my-3">
+                <div class="col-sm">
+                    <p class="myp2">Unique username/Url</p>
+                    <input placeholder="Used as the Url to your songs" class="form-control" type="text">
+                </div>
+                <div class="col-sm">
+                    <p class="myp2">Who are you?</p>
+                    <select class="select1" name="" id="">
+                        <option value="">Artist</option>
+                        <option value="metre">Painter</option>
+                        <option value="kilo">Engineer</option>
+                        <option value="kilo">Architect</option>
+                        <option value="kilo">Lawyer</option>
+                        <option value="kilo">Doctor</option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <p class="myp2 ">Phone number</p>
+                    <input class="form-control" type="text">
+                </div>
+                <div class="col-sm">
+                    <p class="myp2">Password</p>
+                    <input class="form-control" type="text">
+                </div>
+
+            </div>
+             
+            <div class=""">
+                <button class="btn2 text-white" >Sign Up <i class="fa fa-arrow-right"></i></button>
+                <hr>
+            </div>
+
+          
+        </div>
+        <p class="mx-auto midtext">OR</p>
+        <div class="d-flex mysocialdiv my-3">
+            <button class="btn3 bg-info mx-1"><i class="fa fa-twitter fa-1x text-white px-2"></i>Use
+                Twitter</button>
+            <button class="btn3 bg-danger mx-1 "><i class="fa fa-google fa-1x text-white px-2"></i>Use
+                Google</button>
+            <button class="subbtn3 bg-primary mx-2 "><i class="fa fa-facebook fa-1x text-white px-1"></i>Use
+                Facebook</button>
+        </div>
+
+    </div>
+</body>
+<script>
+    var signin = document.getElementById('signin');
+    var signup = document.getElementById('signup');
+    function signin1() {
+        signin.classList.remove('d-none');
+        signup.classList.add('d-none');
+        btnn.classList.add('btn-danger');
+        btnn.classList.remove('btn-default')                
+        btnu.classList.remove('btn-danger')
+        btnu.classList.add('default')
+    }
+
+    function signup2() {
+        signin.classList.add('d-none');
+        signup.classList.remove('d-none');
+        btnn.classList.remove('btn-danger');
+        btnn.classList.add('btn-default');
+        btnu.classList.add('btn-danger')
+        btnu.classList.remove('btn-default')
+       
+    }
+    //   document.getElementById('signup').addClassL=/
+</script>
+
+</html>

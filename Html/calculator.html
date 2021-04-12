@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../CSS/cal.css">
+    <style>
+        table {
+            width: 400px;
+            height: 300px;
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <table class="bg-light">
+
+        <div class="div1 ">
+            <div class="mt-2 ">
+                <span class="mytext font-weight-bold mx-3">Calculator</span>
+                <span class="px-2" style="float: right; ">✖</span>
+                <span class="px-2" style="float: right; ">⬜</span>
+                <span class="px-2" style="float: right; ">➖</span>
+            </div>
+
+        </div>
+        </div>
+        <div>
+            <tr>
+                <td colspan="4">
+                    <textarea class="form-control" name="" id="input" cols="53" rows="4" placeholder="0"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td><button onclick="opera('%')" id="btn"> %</td>
+                <td><button onclick="kosi('CE')" id="btn">CE</td>
+                <td><button onclick="kosi('C')" id="btn">C</td>
+                <td><button onclick="del('')" id="btn">Delete</td>
+            </tr>
+            <tr>
+                <td><button onclick="kosi(1/x)" id="btn">1/X</td>
+                <td><button onclick="kosi(x)" id="btn">X<sup>2</sup></sup></td>
+                <td><button onclick="kosi(3)" id="btn">x <rt>2</rt>
+                </td>
+                <td><button onclick="opera('➗')" id="btn">➗</td>
+            </tr>
+            <tr>
+                <td style="background-color: grey"><button style="background-color: grey" onclick="kosi(7)" id="btn">7</button></td>
+                <td><button onclick="kosi(8)" id="btn">8</button></td>
+                <td><button onclick="kosi(9)" id="btn">9</button></td>
+                <td><button onclick="opera('✖')" id="btn">✖</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="kosi(4)" id="btn">4</button></td>
+                <td style="background-color: grey"><button style="background-color: grey" onclick="kosi(5)" id="btn">5</button></td>
+                <td><button onclick="kosi(6)" id="btn">6</button></td>
+                <td><button onclick="opera('-')" id="btn">➖</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="kosi(1)" id="btn">1</button></td>
+                <td><button onclick="kosi(2)" id="btn">2</button></td>
+                <td style="background-color: grey"><button style="background-color: grey" onclick="kosi(3)"
+                        id="btn">3</button></td>
+                <td><button onclick="opera('+')" id="btn">➕</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="kosi('+/-')" id="btn">+/-</button></td>
+                <td><button onclick="kosi(0)" id="btn">0</button></td>
+                <td><button onclick="kosi('.')" id="btn">.</button></td>
+                <td style="background-color: grey"><button style="background-color: grey;" onclick="eq()">=</button>
+                </td>
+            </tr>
+        </div>
+
+    </table>
+
+    <textarea name="" id="mytext" cols="30" rows="2"></textarea>
+    <button onclick="myarray()"style="width: 100px; height: 30px; border-radius: 30px; background-color: blue; color: white;">ADD</button>
+     <button class="webs">HTML</button>
+     <button class="webs">CSS</button>
+     <button class="webs">JAVASCRIPT</button>
+     <button class="webs">PYTHON</button>
+     <button class="webs">C++</button>
+     <button class="webs">BOOTSTRAP</button>
+    <h1 id="K1"></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+   
+
+
+    <script>
+          var fruits=['mango','pawpaw','orange','apple','banana','pineapple','grape','guava','watermelon','carrot','cucumber'];
+        
+          function myarray(){ 
+            var val1=mytext.value;
+           fruits.push(val1);
+           K1.innerHTML='';    
+           for (let i = 0; i < fruits.length-1 ; i++) {
+           document.getElementById('K1').innerHTML +=`
+           <h2 class='h4' id='${i}'> ${i+1} - ${fruits[i]} </h2>`
+          
+          
+            }
+         
+        }
+        myarray();
+         var all=document.getElementsByClassName('h4');
+         for (let i = 0; i < fruits.length-1; i++) {
+         all[i].addEventListener('click', remuv)
+             
+         }
+         function remuv(event){
+           K1.innerHTML = ''
+           var myfruits= event.target.id;
+           console.log(myfruits);
+           fruits.splice(myfruits, 1)
+         
+           myarray()
+
+        
+            
+             
+        }
+       
+    </script>
+
+      
+
+     /*   var first = '';
+        var sign = '';
+
+        function kosi(bby) {
+            first = input.value
+            first += bby
+            input.value = first
+        }
+        function opera(op) {
+            second = input.value
+            sign = op
+            input.value += sign
+            if (sign !== '') {
+
+            }
+        }
+        function eq() {
+            if (sign == '+') {
+                Number(first) + Number(second)
+            }
+            if (sign == '-') {
+                Number(first) - Number(second)
+            }
+
+            if (sign == '/') {
+                Number(first) / Number(second)
+            }
+
+            if (sign == '%') {
+                Number(first) % Number(second)
+            }
+
+
+         }
+*/
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+<script>
+
+
+   
+    // var first = '';
+    // var sign = '';
+    // var second = '';
+    // var ans = '';
+
+    // function kosi(val) {
+    //     if (first != '' && sign != '') {
+
+    //         second += val;
+    //     }
+    //     input.value += val
+    // }
+    // function opera(opp) {
+    //     if (input.value == '' && opp != "-") {
+    //         return
+    //     }
+    //     else if (input.value == '-') {
+    //         return
+    //     }
+    //     first = input.value;
+    //     sign = opp;
+    //     input.value += opp;
+
+    // }
+    // function del() {
+    //    var a=input.value; 
+    //    var b=a.slice(0,-1); 
+    //   input.value=b
+
+    // }
+    // function eq() {
+    //     if (sign == '+') {
+    //         ans = Number(first) + Number(second)
+    //     }
+
+    //     else if (sign == '-') {
+    //         ans = Number(first) - Number(second)
+    //     }
+
+    //     else if (sign == '✖') {
+    //         ans = Number(first) * Number(second)
+    //     }
+
+    //     else if (sign == '') {
+    //         ans = Number(first) / Number(second)
+    //     }
+    //     else if (sign == '%') {
+    //         ans = Number(first) % Number(second)
+    //     }
+
+
+
+
+
+    //     second = "";
+    //     input.value = ans
+    // }
+
+    // var tzee = ['kosi','Daniel','Samuel','tolu','tomi','seyi','Abiba','Dayo','Tobi','Joshua','Elias','Pelumi'];
+    // function jumi() {
+    // var val1 = text1.value;
+    //     tzee.push(val1)
+    //     K1.innerHTML = tzee.join('/')
+    //     console.log(K1.innerHTML);
+       
+    // }
+
+
+    // ARRAY METHODS
+    // *array.push('baby') simply means you are adding to the array from the right hand side
+       /* array.splice (1,2) simply looks exactly like slice
+       // array.pop()- it is normally stored in a variable i.e it is for the last value that is stored and removed eg. var a= fruits.pop()
+      // array.shift() - it is the opposite of pop i.e it is for the first value
+     // array.unshift()-it is the opposite of push i.e it adds from the left
+      //  array.join()- it converts an array to string . it is normally stored in a variable it looks exactly like split in string method
+        / array.indexof-
+        //array.lastindexof-exactly like the one of string method
+        //array.includes()-checks or verify a particular value in the array
+        //array.concat- it is used to join/adds two arrays together by specifying eg fruits.concat(b). it adds from the front and not the back.*/
+       // array.map
+// SUMMARY
+ //   POP (OPPOSITE) = SHIFT
+ //   PUSH (OPPOSITE) = UNSHIFT
+
+
+
+    //     var bal=input2.value;
+    //         bal=bal.replace('shit','')
+    //         bal=bal.replace('fuck','')
+    //         bal=bal.replace('sex','')
+    //         input2.value = bal;
+    //   var text;
+    //   var val=input2.value;
+    //   var last=val.length-1;
+    //   var at= val.charAt(last);
+    //   if(!isNaN(at) && at!=" "){
+    //       text=val.replace(at,'')
+    //       input2.value=text
+    //   }
+
+        // if (bad=='fuck'){
+        //    bad=''
+        // }
+        // if (val=='shit'){
+        //     input.value=''
+        // }
+        // if(val=='sex'){
+        //     input.value=''
+        // }
+    //     var c=input2.value;
+    //     var d='fuck';
+    //     var e='shit';
+    //     var f='sex'
+    // if(d=='fuck'&& e=='shit' && f=='sex'){
+    // input.value=''
+
+    // }
+
+
+
+
+//<!-- ASSIGNMENT -->
+// <!-- 1. WHAT IS A LOOP -->
+// <!-- 2. WHAT IS FOR LOOP -->
+// <!-- 3. HOW CAN WE USE A FORLOOP OR HOW IT CAN BE USED  -->

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="" id="mytext" cols="30" rows="2"></textarea>
+    <button onclick="myarray()"style="width: 100px; height: 30px; border-radius: 30px; border:none; background-color: blue; color: white;">ADD</button>
+    <button class="webs" style="width: 100px; height: 30px; border-radius: 30px; border:none; background-color: blue; color: white; margin: 10px; padding: 10px;">HTML</button>
+    <button class="webs" style="width: 100px; height: 30px; border-radius: 30px; border:none; background-color: blue; color: white;" >CSS</button>
+    <button class="webs" style="width: 100px; height: 30px; border-radius: 30px; border:none; background-color: blue; color: white;">JAVASCRIPT</button>
+    <button class="webs" style="width: 100px; height: 30px; border-radius: 30px; border:none; background-color: blue; color: white;">PYTHON</button>
+    <button class="webs" style="width: 100px; height: 30px; border-radius: 30px; border:none; background-color: blue; color: white;">C++</button>
+    <button class="webs" style="width: 100px; height: 30px; border-radius: 30px; border:none; background-color: blue; color: white;">BOOTSTRAP</button>
+   <h1 id="K1"></h1>
+   <div id="div"></div>
+
+     <script>
+       /*
+             continue keyword is to omit a character or value stating its condition;
+             break keyword stops at a specified condition.
+       */
+    //        var names=['kosi','ifeoma','mercy','john','ifeyinwa','jumoke','jboy','nkem','anthony','lolia','anthonia','joyce','peter','aunty','joy','paul','ujunwa','mary','grace','michael','tansele'];
+            
+    //    for (let i = 0; i < names.length; i++) {
+    //         console.log(i)
+           
+    //    }
+
+       var anarray=[{
+                name:'Kosi',
+                phone: 09013751524,
+                age:10
+            },
+            {
+                name:'Ifeoma',
+                phone: 08149769777,
+                age:13
+
+            },
+            {
+                name:'Mercy',
+                phone: 08066810593,
+                age:15
+
+            },
+            {
+                name:'Ebere',
+                phone: 08067470519,
+                age:16
+
+            },
+            {
+                name:'Ifeyinwa',
+                phone: 08129493154,
+                age:12
+
+            },
+            {
+                name:'Nkechi',
+                phone: 08035299172,
+                age:10
+
+            }]
+
+            // USING AN ARRAY METHOD OF FILTER WITHOUT A FOR LOOP IT IS LIKE A FOR EACH METHOD
+            // var unknown=anarray.filter(function(human){
+            //      return human.age > 10;
+            //  })
+            //  console.log(unknown)
+
+
+
+           // USING AN ARRAY METHOD METHOD OF MAP WITHOUT A FOR LOOP IT IS LIKE A FOR EACH STATEMENT!!!
+            //  var names=anarray.map(function(human){
+            //      return human.name
+            //  })
+            //  console.log(names)
+   
+             // USING AN ARRAY METHOD METHOD OF REDUCE( it invloves numbers) WITHOUT A FOR LOOP IT IS LIKE A FOR EACH STATEMENT!!!
+            //  var number=[2,4,6,8,10,12,14,16,18,20]
+            //  var unknown=number.reduce(function(initial,last){
+            //      return initial + last
+            //  })
+            //   console.log(unknown)
+               
+              
+             // USING AN ARRAY METHOD METHOD OF EVERY( it invloves numbers) WITHOUT A FOR LOOP IT IS LIKE A FOR EACH STATEMENT!!!
+            //  var number=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+            //  var unknown=anarray.every(function(initial,last){
+            //      return initial.age >=10;
+            //  })
+            //   console.log(unknown)
+
+
+
+             // USING AN ARRAY METHOD METHOD OF FILTER TO DERIVE AN EVEN NUMBER
+            //   var number=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+            //    var unknown=number.filter(function(human){
+            //      return human  % 2 == 0;
+            //  })
+            //  console.log(unknown)
+
+
+            // USING AN ARRAY METHOD OF PUSH AND FOR LOOP//
+            // var unknown=[]
+            // for (let index = 0; index < anarray.length; index++) {
+            //    if (anarray[index].age > 10 ) {
+            //         unknown.push(anarray[index])
+            //    }
+            //    console.log(unknown)
+            //     }
+
+
+                // USING AN ARRAY METHOD OF PUSH AND FOR LOOP// 
+                //  var unknown=[]
+                //   for (let index = 0; index < anarray.length; index++) {
+                //        if(anarray[index].age > 10){
+                //            unknown.push(anarray[index])
+                //        }
+                //        console.log(unknown)
+                    
+                //   }
+
+    
+            // unknown.push(anarray[index].name)
+                
+            // }
+           // console.log(unknown)
+
+        //   THE FOR OF STATEMENT//
+        // ** 
+         //  for (var element of names) {
+         //      console.log(element)
+        //   }
+
+        //    THE FOR EACH STATEMENT
+        //**     names.forEach(function(element,i) {
+        //**     console.log(element,i)
+        //**    } )
+      
+       /* function myarray(){
+        var input = mytext.value;
+        var mysplit = input.split(',');
+
+        var largest = 0;
+
+         for( let i = 0; i < mysplit.length; i++){
+         if(mysplit[i] > largest)
+          {largest =parseInt( mysplit[i])
+           }
+           document.getElementById('K1').innerHTML = `The highest number is ${largest}`;
+       }
+     } 
+    
+   */
+    var b = document.createElement('img');
+        b.setAttribute ('src','../download.jpg')
+        b.classList.add('myimage');
+        b.id='image'
+        div.append(b)
+   console.log(b)
+
+    // var a = document.createElement('button');
+    //     a.classList.add('btn');
+    //     a.id='Kosi'
+    //     var text = document.createTextNode('click me')
+    //      a.append(text);
+    //     div.append(a);
+    //     console.log(a)
+     
+     </script>
+     
+</body>
+</html>
+
+
