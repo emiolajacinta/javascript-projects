@@ -1,7 +1,12 @@
 .div1{
     border-radius: 10px;
-    width: 350px;
+    width: 450px;
+    height: 350px;
 }
 .div2{
     width: 50px;
+}
+.but1,.but2{
+    margin-top:30px;
+    width: 100px;
 }
