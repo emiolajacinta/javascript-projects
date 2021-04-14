@@ -3,14 +3,14 @@ btn1.addEventListener('click',start)
 function start(){
 var val1 = input1.value;
 var val2 = input2.value;
-var counter = setInterval(calculate,50);
+var counter = setInterval(calculate,10);
 
 function calculate() {
   val1--;
   demo.innerHTML=val1
    if(val1 == val2){
       clearInterval(counter)
-      demo2.innerHTML="Time's up please stop"
+      demo2.innerHTML="Time's up stop joor"
   }
   else if ( val1 == '' && val2 == ''){
       clearInterval(counter)

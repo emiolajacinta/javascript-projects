@@ -8,28 +8,57 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-<body>
-    <textarea name="" cols="30" rows="2" id="input1"></textarea>
-    <button class=" btn btn-primary" id="btn1">Add</button>
-    <table>
-        <tr>
-            <td>Title</td>
-            <td class="val1" id="tab1"></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><button class="btn btn-secondary">Done</button></td>
-            <td><button class="btn btn-danger">Delete</button></td>
-        </tr>
-    </table>
+<body class="bg-light">
+    <input id="input1" type="text"><br>
+    <button class="btn btn-primary"id="btn1">ADD</button>
+     <table class="table table-bordered">
+         <tr>
+             <th>Title</th>
+             <th></th>
+             <th></th>
+         </tr>
+         <tbody id="tb">
+             
 
-
-
-
+         </tbody>
+     </table>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="../js/to-do-list.js"></script>
+     <!-- <script src="../js/to-do-list.js"></script> -->
+    <script>
+        var myarray=[]
+        btn1.addEventListener('click',addd)
+        function addd(){
+          title=input1.value;
+          text = {title};
+          myarray.push(text);
+          console.log(myarray)
+          document.getElementById('tb').innerHTML=''
+          disp(myarray)
+        }
+         function disp(data){
+           var _tablebody = document.getElementById('tb');
+           for (let index = 0; index < data.length; index++) {
+              var show_ = `<tr class = 'rows'><td>${myarray[index].title}</td><td><button onclick="done()" class="btn btn-secondary done_button">Done</button></td><td><button onclick="del(${index})" class="btn btn-danger del_button">Delete</button></td>`
+               document.getElementById('tb').innerHTML += show_
+           }
+           var _finish = document.getElementsByClassName('done_button');
+           for (let index = 0; index < _finish.length; index++) {
+              _finish[index].addEventListener('click',done)  
+           }
+         }
+         function done(ebent_){
+           ebent_.target.setAttribute('class','btn btn-success')
+         }
+         function del(rem){
+           myarray.splice(rem, 1)
+           tb.innerHTML='';
+           disp(myarray)
+           
+         }
+       
+    </script>
+   
 </body>
 </html>
