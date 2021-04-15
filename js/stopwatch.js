@@ -10,7 +10,7 @@ function calculate() {
   demo.innerHTML=val1
    if(val1 == val2){
       clearInterval(counter)
-      demo2.innerHTML="Time's up stop joor"
+      demo2.innerHTML="Time's up stop joor "
   }
   else if ( val1 == '' && val2 == ''){
       clearInterval(counter)
