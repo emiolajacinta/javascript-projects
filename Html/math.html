@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math</title>
+</head>
+<body>
+    <h2 id="K1"></h2>
+</body>
+<script>
+
+
+
+
+
+   var {log}=console
+    // var num = [1,9,98,4,5,6,7,8,9,89,201,42,4,3]
+    // var largest = 0;
+    //     for( let i = 0; i < num.length; i++){
+    //     if(num[i] > largest)
+    //     {largest = parseInt( num[i])
+    //     }
+    //     console.log(largest)
+    //     document.getElementById('K1').innerHTML = `The highest number is ${largest}`;
+    //     }
+
+         // how to create Object
+// METHOD 1
+// function Human(name,age,gender='male'){
+// this.name=name;
+// this.age=age;
+// this.gender=gender;
+
+// this.getName = function(){
+//     return this.name;
+// }
+// this.hasBreast = function(){
+//     return this.gender=='Female';
+// }
+
+// }
+// var eve = new Human('Eve',20,'Female')
+// eve.getName()
+// var b = eve.hasBreast()
+// console.log(b)
+
+
+
+
+// class People{
+//     constructor(name,age,occupation){
+//        this.name=name;
+//        this.age=age;
+//        this.occupation='Trader'
+//     }
+//    get getSomething(){
+//         return this. occupation=='Banker'
+//     }
+// }
+// class Extra extends People{
+//     constructor(name,age,occupation){
+//         super(name,age,occupation)
+//           this.occupation='Doctor'
+//     }
+// }
+// var FromExtra = new Extra('Ifeyinwa',39,'Doctor')
+// //var unPeople = new People('Ifeoma',37,'Lawyer')
+// console.log(FromExtra)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // METHOD 2
+// class Human{
+//     constructor(name,age,gender='Male'){
+//         this.name=name;
+//         this.age=age;
+//         this.gender=gender
+//     }
+//   get hasBreast(){
+//         return this.gender=='Female';
+//     }
+// }
+// class Kosi extends Human{
+//     constructor(name,age){
+//         super(name,age)
+//     }
+// }
+// var fromKosi = new Kosi('Eve',20)
+//var eve = new Human ('Eve',20,'Female')
+// console.log(fromKosi)
+
+
+
+//DESTRUCTION OF ARRAY
+
+//SPREAD OPERATOR SYMBOL IS THREEE DOTS I.[...]
+
+// let num = [1,2,3,4,5];
+// let letter = ['a','b','c','d']
+// let letterNum = [...letter,...num]
+// log(letterNum)
+
+// let num1 = [1,2,3,4,6,7,8]
+// let [a,b,c,...d] = num1
+// log(num1)
+
+
+// let num2 = [...num] 
+// num2[0] = 5;
+// log(num2)
+
+
+// function hello(...params){
+//     log(params)
+// }
+// hello(1,2,3,4,5)
+
+//DESTRUCTION OF OBJECTS
+// let user={
+//     name:'Kosi',
+//     age: 15,
+//     email:'emiolajacinta@gmail.com',
+//     Hobby:['coding','Dancing'],
+//     Address:{city:'Ibadan',State:'Oyo',homeAddress:'Agara estate Akala Expressway'}}
+// let {name:names,age,email,Address:{homeAddress:user_add}}=user;
+// log(names)
+// log(age)
+// log(email)
+// log(user_add)
+
+//spread operator
+//data destruction
+
+let user = {
+    name:'Kosi',
+    age:10,
+    skill:[{name:'JAVASCRIPT',level:5},{name:'HTML',level:10}],
+    social:{facebook:{link:'facebook.com',friend:2000}}
+}
+let {name,age,skill,social:{facebook:{friend:friends}}}=user
+log(name)
+log(age)
+log(skill[0].level)
+log(friends)
+// var bello
+//  let hello = ()=>{
+//     return "Hello World"}
+//  log(hello)
+//  hello()
+//  let{floor,random}=Math;
+
+
+//  log(floor(random()*10))
+</script>
+</html>

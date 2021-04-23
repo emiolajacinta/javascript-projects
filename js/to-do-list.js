@@ -28,19 +28,19 @@ function addd(){
   text = {title:_title,done:false};
   myarray.push(text);
   console.log(myarray)
-  tb.innerHTML=''
-  disp()
-}
- function disp(){
+//   tb.innerHTML=''
+//   disp(fr_om)
+} 
+ function disp(_new){
    for (let index = 0; index < myarray.length; index++) {
-        if (myarray[index].done == true) {
+        if (myarray[index].done == false) {
             var statuses;
-            statuses = "completed"
-            btnclass ="btn btn-success" 
+            statuses = "undone!"
+            btnclass ="btn btn-secondary" 
         }
-        else if(myarray[index].done == false){
-            statuses ='undone!'
-            btnclass='btn btn-secondary'
+        else if(myarray[index].done == true){
+            statuses ="completed!"
+            btnclass='btn btn-success'
         }
        tb.innerHTML+=`<tr class = 'rows'><td>${index+1}</td>
        <td>${myarray[index].title}</td>
@@ -89,7 +89,7 @@ function addd(){
 //   var aud = document.createElement('audio');
 //   aud.src = '../goal.mp3';
 //   aud.play()
-aud = new Audio('../goal.mp3')
-aud.play()
+// aud = new Audio('../goal.mp3')
+// aud.play()
 
  
