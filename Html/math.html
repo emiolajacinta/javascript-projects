@@ -9,11 +9,6 @@
     <h2 id="K1"></h2>
 </body>
 <script>
-
-
-
-
-
    var {log}=console
     // var num = [1,9,98,4,5,6,7,8,9,89,201,42,4,3]
     // var largest = 0;
@@ -27,10 +22,10 @@
 
          // how to create Object
 // METHOD 1
-// function Human(name,age,gender='male'){
-// this.name=name;
-// this.age=age;
-// this.gender=gender;
+ var myf = function Human(name='Adam',age,gender='male'){
+this.name=name;
+this.age=age;
+this.gender=gender;
 
 // this.getName = function(){
 //     return this.name;
@@ -39,8 +34,10 @@
 //     return this.gender=='Female';
 // }
 
-// }
-// var eve = new Human('Eve',20,'Female')
+}
+console.log(Human)
+var eve = new Human('Eve','20','Female')
+console.log(eve)
 // eve.getName()
 // var b = eve.hasBreast()
 // console.log(b)
@@ -154,17 +151,17 @@
 //spread operator
 //data destruction
 
-let user = {
-    name:'Kosi',
-    age:10,
-    skill:[{name:'JAVASCRIPT',level:5},{name:'HTML',level:10}],
-    social:{facebook:{link:'facebook.com',friend:2000}}
-}
-let {name,age,skill,social:{facebook:{friend:friends}}}=user
-log(name)
-log(age)
-log(skill[0].level)
-log(friends)
+// let user = {
+//     name:'Kosi',
+//     age:10,
+//     skill:[{name:'JAVASCRIPT',level:5},{name:'HTML',level:10}],
+//     social:{facebook:{link:'facebook.com',friend:2000}}
+// }
+// let {name,age,skill,social:{facebook:{friend:friends}}}=user
+// log(name)
+// log(age)
+// log(skill[0].level)
+// log(friends)
 // var bello
 //  let hello = ()=>{
 //     return "Hello World"}

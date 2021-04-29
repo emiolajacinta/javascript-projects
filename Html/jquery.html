@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Jquery</title>
+    <link rel="stylesheet" href="./BOOSTRAP/bootstrap.min.css">
+    <link rel="stylesheet" href="./BOOSTRAP/bootstrap.css">
+</head>
+<body class="bg-warning">
+    <div class="card w-50 shadow p-5 mx-auto rounded-lg mt-5" id="div1">
+      <div class="card-body">
+        <h2 class="text-center text-primary heading">JQUERY <span class="text-danger"> CLASS</span></h2>
+        <input class="bttt form-control mb-3" type="number" id="inp1">
+        <input class="bttt form-control mb-3" type="number" id="inp2">
+        <h1 id="myh1"></h1>
+      </div>
+      <hr class="bg-primary">
+      </div>
+     
+        
+    </div>
+    <button class="btn btn-primary fixed-bottom font-weight-bold ml-auto mb-5 mr-5" id="mybtn"><span>➕</span>Click me</button>
+</body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  $(function(){
+    let {log}= console
+      let school={
+          name:'hss',
+          century:50
+      }
+      let{school,NumberOfBabies=school.length}=school
+      logI(NumnerOfBabies)
+     let {century,name}=school
+     let siblings=school.sister?school.sister:'kosi'
+      log(century,name,siblings)
+
+    $('input').keyup(function(){
+       let val1 = $('#inp1').val()
+       let val2 = $('#inp2').val()
+       let ans = val1 * val2
+        $('#myh1').html(ans)
+      
+   })
+   $('#mybtn').click(function () {
+    let div =` <div class="card-body border border-light">
+        <h2 class="text-center text-primary">JQUERY<span class="text-danger">CLASS</span></h2>
+        <input class="bttt form-control mb-3" type="number" id="inp1">
+        <input class="bttt form-control mb-3" type="number" id="inp2">
+        <h1 id="myh1"></h1>
+      </div><hr class="bg-primary">` ;
+    //   $('#div1').prepend(div)
+      $(this).toggleClass('btn-danger')
+   })
+  
+})   
+
+</script>

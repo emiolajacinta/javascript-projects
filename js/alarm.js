@@ -1,74 +1,102 @@
 
-// var myHr = document.getElementById('hour_display').innerHTML;
-// var myMin = document.getElementById('minute_display').innerHTML;
-// var interval_function = setInterval(interval, 1000)
-// function interval(){
-// var time = new Date()
-// if(time.getHours() >= 12){
-//     document.getElementById('am_pm').innerHTML = 'PM'
-//     document.getElementById('hour_display').innerHTML = time.getHours() -12
-// }else{
-//     document.getElementById('am_pm').innerHTML = 'AM'
-//     document.getElementById('hour_display').innerHTML = time.getHours()
-// }
-// document.getElementById('minute_display').innerHTML = time.getMinutes()
-// document.getElementById('seconds_display').innerHTML = time.getSeconds()
-// }
+  function dispTime(){
+    var time = new Date()
+    var hourMinute = time.toLocaleTimeString()
+    document.getElementById('time').innerHTML= hourMinute
+    setTimeout(dispTime,1000)
+    }
+   dispTime()
 
-// function disp_Date(){
-// var showDate = new Date();
-// var month, day, datte, yyear;
-// var month_array = ['January', 'Febuary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
-// var days_array = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
-// month = month_array[showDate.getMonth()]
-// day = days_array[showDate.getDay()]
-// datte = showDate.getDate()
-// yyear = showDate.getFullYear()
-// document.getElementById('date').innerHTML += day+', '+month+' '+datte+', '+yyear
-// }
-// disp_Date()
+   btns.addEventListener('click', getAlarm)
 
-// function hour_option(){
-// for (let index = 0; index <= 12; index++) {
-//     document.getElementById('hr').innerHTML += `<option value = "${index}" id = "hr_opt">${index}</option>`       
-// }
-// }
-// hour_option()
-// function minutes_option(){
-// for (let index = 0; index <= 60; index++) {
-//     document.getElementById('min').innerHTML += `<option value = "${index}" id = "min_opt">${index}</option>`
-// }
-// }
-// minutes_option()
-// document.getElementById('hr').addEventListener('change', hawa)
-// document.getElementById('min').addEventListener('change', minit)
-// var save_hr;
-// var save_min;
-// var timmee;
-// function hawa(){
-// save_hr = document.getElementById('hr_opt').value
-// }
-// function minit(){
-// save_min = document.getElementById('min_opt').value
-// }
+   function getAlarm(){
+  var time = new Date();
+  var  hourMinute = time.toLocaleTimeString();
+  if (hour.value == time.getHours() && min.value == time.getMinutes()) {
+      document.getElementById('sec').innerHTML =`<h3>${rem.value}</h3>`;
+      rt.innerHTML=hourMinute
+      var aud = new Audio('../alarm2.mp3').play()
+     }
+     else {
+     setTimeout(getAlarm,1000)
+     }
+   }
 
-// function set_alarm(){
-// console.log('alarm set')
-// call() 
-// }
-// btn_alarm.addEventListener('click', set_alarm)
-// function call(){
-// timmee = setInterval(sound, 1000)
-// }
-// function sound(){
-// if(hour_display.innerHTML == hr.value && minute_display.innerHTML == min.value){
-//     console.log('alarm set')
-//     document.getElementById('alarm').play()
-//    // alert('alarm set')
-//     console.log(hr_opt)
-//     console.log(min_opt)
-// }
-// }
+
+   $(document).ready(function(){
+     let {log}=console;
+
+     $('#btnn').click(function(){
+      let val1 = $('#input1').val()
+      $('#rt').html(val1)
+  //     $('#rt').css({color:'blue'})
+      $('#rt').addClass('text-success bg-light')
+      log(val1)
+     })
+  })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+//     let text = document.getElementById('input1');
+//     let tex = text.value
+//     let disp = document.getElementById('rt')
+//     var wod = 5
+//  input1.addEventListener('keydown',deduce)
+
+//    function deduce(){
+//     rt.innerHTML = wod;
+
+//     if(wod == 0){
+//       rt.innerHTML=rt.innerHTML.substr(0,rt.innerHTML-1)
+//       text.value = text.value.substr(0,4)
+//       return
+//     }
+//     wod--;
+//   }
+// deduce()
+//  input1.addEventListener('keyup',operate)
+//  function operate(){
+//  let reg = /^[a-zA-Z]{5,15}[@]{1}[a-z]{5}[.]{1}[a-z]{3}$/
+//  let text = input1.value;
+//  let b = reg.test(text)
+//  if(reg.test(text)){
+//   rt.innerHTML ='Correct mail'
+//  }
+//  else{
+//    rt.innerHTML='Incorrect';
+//  }
+ 
+//  console.log(b)
+//  }
+//    import people from "./module.js";
+  //  console.log(people);
+
+
+
+
+
+
+
+
  
 // // math.floor- it prints or converts decimal to whole number. i.e it console logs the exact number b4 d whole number.
 // // math.ceil(4.2)- it returns 4 not minding if it can be rounded, opposite of math.floor
@@ -100,6 +128,4 @@
 // var b = eve.hasBreast
 // console.log(b)
 
-import people from './module.js';
 
-console.log(people);

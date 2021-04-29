@@ -1,6 +1,8 @@
 let people={
-    Name:Kosi,
+    Name:"Kosi",
     age:15,
-    phone:08149769777
+    phone:+2348149769777
+
 }
-export{people as default}
+ export{people as default}
+ // A module is a block of code  or group of functions, variables, algorithmn that u can export from a particular file 
