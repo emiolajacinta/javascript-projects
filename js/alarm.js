@@ -7,19 +7,19 @@
     }
    dispTime()
 
-   btns.addEventListener('click', getAlarm)
+   document.getElementById('btns').addEventListener('click',() => {var time = new Date();
+    var  hourMinute = time.toLocaleTimeString();
+    if (hour.value == time.getHours() && min.value == time.getMinutes()) {
+        document.getElementById('sec').innerHTML =`<h3>${rem.value}</h3>`;
+        rt.innerHTML=hourMinute
+        var aud = new Audio('../alarm2.mp3').play()
+       }
+       else {
+       setTimeout(()=>{},1000)
+       }})
 
    function getAlarm(){
-  var time = new Date();
-  var  hourMinute = time.toLocaleTimeString();
-  if (hour.value == time.getHours() && min.value == time.getMinutes()) {
-      document.getElementById('sec').innerHTML =`<h3>${rem.value}</h3>`;
-      rt.innerHTML=hourMinute
-      var aud = new Audio('../alarm2.mp3').play()
-     }
-     else {
-     setTimeout(getAlarm,1000)
-     }
+  
    }
 
 
@@ -33,6 +33,9 @@
       $('#rt').addClass('text-success bg-light')
       log(val1)
      })
+
+     
+  
   })
 
 

@@ -12,16 +12,17 @@
     <link rel="stylesheet" href="../CSS/classwork.css">
 </head>
 
-<body class="bg-secondary">
-    <div class="div1 card card-body bg-white  mx-auto my-5 ">
+<body class="body">
+    <div class="div1 card card-body shadow bg-white  mx-auto my-5 ">
         <div class=" subdiv1 d-flex mt-5">
-            <button id="btnn" onclick="signin1()" class="btn btn-danger w-50 h-50 py-2 font-weight-bold">Sign in</button>
-            <button id="btnu" onclick="signup2()" class="btn btn-default w-50 py-2">Sign up</button>
+            <button id="btnn" class="btn btn-danger w-50 h-50 py-2 font-weight-bold">Sign in</button>
+            <button id="btnu" class="btn btn-default w-50 py-2">Sign up</button>
         </div>
         <hr>
+        <!-- MY SIGNIIN PAGE -->
         <div id="signin" class="card border-white">
             <div class="mx-auto">
-                <img class="myimage" src="../download.jpg" alt="">
+                <img class="myimage" src="../IMAGES/regina.png" alt="">
                 <span class=" font-weight-bold mx-2 imgtext">Sign in</span>
             </div>
             <div>
@@ -39,6 +40,8 @@
             <hr>
 
         </div>
+        <!--  -->
+
         <!-- MY SIGN UP PAGE -->
         <div id="signup" class=" border-white d-none">
             <div class="" style="margin-left: 145px;">
@@ -86,13 +89,14 @@
 
             </div>
              
-            <div class=""">
+            <div class="">
                 <button class="btn2 text-white" >Sign Up <i class="fa fa-arrow-right"></i></button>
                 <hr>
             </div>
 
           
         </div>
+        <!--  -->
         <p class="mx-auto midtext">OR</p>
         <div class="d-flex mysocialdiv my-3">
             <button class="btn3 bg-info mx-1"><i class="fa fa-twitter fa-1x text-white px-2"></i>Use
@@ -108,25 +112,23 @@
 <script>
     var signin = document.getElementById('signin');
     var signup = document.getElementById('signup');
-    function signin1() {
+    btnn.addEventListener('click',()=>{
         signin.classList.remove('d-none');
         signup.classList.add('d-none');
         btnn.classList.add('btn-danger');
         btnn.classList.remove('btn-default')                
         btnu.classList.remove('btn-danger')
         btnu.classList.add('default')
-    }
-
-    function signup2() {
+    })
+    btnu.addEventListener('click',()=>{
         signin.classList.add('d-none');
         signup.classList.remove('d-none');
         btnn.classList.remove('btn-danger');
         btnn.classList.add('btn-default');
         btnu.classList.add('btn-danger')
         btnu.classList.remove('btn-default')
-       
-    }
-    //   document.getElementById('signup').addClassL=/
+    })
+  
 </script>
 
 </html>

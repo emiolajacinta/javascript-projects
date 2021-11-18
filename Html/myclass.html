@@ -35,6 +35,7 @@
         
             <div class="mb-3 m-3">
                 <input id="input2" class="form-control" type="text" placeholder="Ans=">
+                <p class="text-center text-danger" id="demo"></p>
             </div>
       
         <button onclick="kosi()"class="mybutton mx-auto">Convert now</button>
@@ -48,20 +49,24 @@
 
 
             if (a == 'metre' && b=='kilo'){
-                d = c * 1000 + 'km' 
+                d =`${c * 1000}${'km'}` 
                 input2.value = d
             }
             else if(a =='metre' && b =='kilo'){
-                 d=  c/1000 + 'm'
+                 d=`${c/1000}${'m'}`
                  input2.value=d
             }
             else if(a =='metre' && b =='kilo'){
-                 d= c*1000 + 'km'
+                 d=`${c*1000}${'km}'`
                  input2.value=d
             }
             else if(a == 'kilo' && b =='metre'){
                  d=c/1000 +'m'
                  input2.value=d
+            }
+            else if(a==''&& b==''){
+               demo.innerHTML='Pls fill out this field'
+            
             }
         }
         </script>

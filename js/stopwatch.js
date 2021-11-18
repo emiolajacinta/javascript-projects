@@ -36,8 +36,8 @@ function stop(){
 }
 
 }
-// var num=[1,2,3,4,5,6,7,8,9]
-// var localset = localStorage.setItem('name', JSON.stringify(num));
-// var localget = localStorage.getItem('name')
-// var nums = JSON.parse(localget);
-// console.log(nums)
+var num=[1,2,3,4,5,6,7,8,9]
+var localset = localStorage.setItem('name', JSON.stringify(num));
+var localget = localStorage.getItem('name')
+var nums = JSON.parse(localget);
+console.log(nums)

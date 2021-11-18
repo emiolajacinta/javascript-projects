@@ -96,12 +96,12 @@
 
 
 
-             // USING AN ARRAY METHOD METHOD OF FILTER TO DERIVE AN EVEN NUMBER
-            //   var number=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-            //    var unknown=number.filter(function(human){
-            //      return human  % 2 == 0;
-            //  })
-            //  console.log(unknown)
+            //   USING AN ARRAY METHOD METHOD OF FILTER TO DERIVE AN EVEN NUMBER
+            //    var number=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+            //     var unknown=number.filter(function(human){
+            //       return human  % 2 == 0;
+            //   })
+            //   console.log(unknown)
 
 
             // USING AN ARRAY METHOD OF PUSH AND FOR LOOP//
@@ -140,27 +140,39 @@
         //**     names.forEach(function(element,i) {
         //**     console.log(element,i)
         //**    } )
-      
-       /* function myarray(){
-        var input = mytext.value;
-        var mysplit = input.split(',');
+       
 
-        var largest = 0;
-         for( let i = 0; i < mysplit.length; i++){
-         if(mysplit[i] > largest)
-          {largest =parseInt( mysplit[i])
+        var numbers=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]
+
+        function prime() {
+           for (let i = 0; i < numbers.length; i++) {
+               if (i%i == 0) {
+                   console.log(i);
+               }
            }
-           document.getElementById('K1').innerHTML = `The highest number is ${largest}`;
-       }
-     } 
+        }
+
+//         function myarray(){
+//         // var input = mytext.value;
+//         // var mysplit = input.split(',');
+
+//         let num=[1,2,4,6,80,30,50,70]
+//         var largest = 0;
+//          for( let i = 0; i < num.length; i++){
+//          if(num[i] > largest)
+//           {largest = num[i]
+//            }
+//            document.getElementById('K1').innerHTML = `The highest number is ${largest}`;
+//        }
+//      } 
     
-   */
-    var b = document.createElement('img');
-        b.setAttribute ('src','../download.jpg')
-        b.classList.add('myimage');
-        b.id='image'
-        div.append(b)
-   console.log(b)
+   
+//     var b = document.createElement('img');
+//         b.setAttribute ('src','../download.jpg')
+//         b.classList.add('myimage');
+//         b.id='image'
+//         div.append(b)
+//    console.log(b)
 
     // var a = document.createElement('button');
     //     a.classList.add('btn');
@@ -169,7 +181,13 @@
     //      a.append(text);
     //     div.append(a);
     //     console.log(a)
-     
+    
+    
+
+
+    // spread operator
+    let people = ['tolu','seyi',5,10,false]
+    console.log(...people)
      </script>
      
 </body>

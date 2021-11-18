@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <table class="bg-light">
+    <table class="bg-lightv">
 
         <div class="div1 ">
             <div class="mt-2 ">
@@ -42,8 +42,8 @@
             <tr>
                 <td><button onclick="opera('%')" id="btn"> %</td>
                 <td><button onclick="kosi('CE')" id="btn">CE</td>
-                <td><button onclick="kosi('C')" id="btn">C</td>
-                <td><button onclick="del('')" id="btn">Delete</td>
+                <td><button onclick="removee('C')" id="btn">C</td>
+                <td><button onclick="del('del')" id="btn">Delete</td>
             </tr>
             <tr>
                 <td><button onclick="kosi(1/x)" id="btn">1/X</td>
@@ -95,218 +95,164 @@
 
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
 
+<script>
+    var first =Number;
+    var second=Number;
+    var sign = '';
+    var ans;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-
-
-
-
-
-
-   
-
-
-    <script>
-          var fruits=['mango','pawpaw','orange','apple','banana','pineapple','grape','guava','watermelon','carrot','cucumber'];
-        
-          function myarray(){ 
-            var val1=mytext.value;
-           fruits.push(val1);
-           K1.innerHTML='';    
-           for (let i = 0; i < fruits.length-1 ; i++) {
-           document.getElementById('K1').innerHTML +=`
-           <h2 class='h4' id='${i}'> ${i+1} - ${fruits[i]} </h2>`
-          
-          
-            }
-         
-        }
-        myarray();
-         var all=document.getElementsByClassName('h4');
-         for (let i = 0; i < fruits.length-1; i++) {
-         all[i].addEventListener('click', remuv)
-             
+  
+         function kosi(bby) {
+           first =bby
+           input.value+=first
+           if(first!='' && sign!=''){
+                 parseInt(second)+=bby
+             }
+      
          }
-         function remuv(event){
-           K1.innerHTML = ''
-           var myfruits= event.target.id;
-           console.log(myfruits);
-           fruits.splice(myfruits, 1)
+         function removee(){
+             document.getElementById('input').value=""
+         }
+         function del(){
+             var val1 = document.getElementById('input').value
+             var complete = val1.slice(0,-1)
+             document.getElementById('input').value = complete
+         }
+         function opera(op) {
+             if(document.getElementById('input').value == '' && op !='-'){
+                 return
+             }
+             else if (document.getElementById('input').value == '-'){
+                 return
+             }
+             second = document.getElementById('input').value
+             sign = op
+            input.value += op
+        }
+       
+        function eq() {
+            console.log(first)
+            console.log(second)
+            if (sign == '+') {
+             ans = parseInt(first) + parseInt(second)
+             input.value=ans
+             console.log(ans);
+             }
+           else if (sign == '-') {
+             ans = parseInt(first) - parseInt(second)
+             input.value=ans
+            }
+
+            if (sign == '/') {
+             ans = Number(first) / Number(second)
+             }
+
+             if (sign == '%') {
+              ans = Number(first) % Number(second)
+             }
+         }
+      
+    
+
+ </script>          
+   <!-- <script>
+    var first = '';
+    var sign = '';
+    var second = '';
+    var ans = '';
+
+    function kosi(val) {
+        first=val
+        if (first != '' && sign != '') {
+
+            second += val;
+        }
+        input.value += val
+    }
+    function opera(opp) {
+        if (input.value == '' && opp != "-") {
+            return
+        }
+        else if (input.value == '-') {
+            return
+        }
+        first = input.value;
+        sign = opp;
+        input.value += opp;
+
+    }
+    function del() {
+       var a=input.value; 
+       var b=a.slice(0,-1); 
+      input.value=b
+
+    }
+    function eq() {
+        console.log(first)
+        console.log(second)
+        if (sign == '+') {
+            ans = parseInt(first) + parseInt(second)
+        }
+
+        else if (sign == '-') {
+            ans = Number(first) - Number(second)
+        }
+
+        else if (sign == '✖') {
+            ans = Number(first) * Number(second)
+        }
+
+        else if (sign == '') {
+            ans = Number(first) / Number(second)
+        }
+        else if (sign == '%') {
+            ans = Number(first) % Number(second)
+        }
+    }
+    </script> -->
+    
+<!-- 
+    // <script>
+    //       var fruits=['mango','pawpaw','orange','apple','banana','pineapple','grape','guava','watermelon','carrot','cucumber'];
+        
+    //       function myarray(){ 
+    //         var val1=mytext.value;
+    //        fruits.push(val1);
+    //        K1.innerHTML='';    
+    //        for (let i = 0; i < fruits.length-1 ; i++) {
+    //        document.getElementById('K1').innerHTML +=`
+    //        <h2 class='h4' id='${i}'> ${i+1} - ${fruits[i]} </h2>`
+          
+          
+    //         }
          
-           myarray()
+    //     }
+    //     myarray();
+    //      var all=document.getElementsByClassName('h4');
+    //      for (let i = 0; i < fruits.length-1; i++) {
+    //      all[i].addEventListener('click', remuv)
+             
+    //      }
+    //      function remuv(event){
+    //        K1.innerHTML = ''
+    //        var myfruits= event.target.id;
+    //        console.log(myfruits);
+    //        fruits.splice(myfruits, 1)
+         
+    //        myarray()
 
         
             
              
-        }
+    //     }
        
-    </script>
+    // </script>
 
-      
-
-     /*   var first = '';
-        var sign = '';
-
-        function kosi(bby) {
-            first = input.value
-            first += bby
-            input.value = first
-        }
-        function opera(op) {
-            second = input.value
-            sign = op
-            input.value += sign
-            if (sign !== '') {
-
-            }
-        }
-        function eq() {
-            if (sign == '+') {
-                Number(first) + Number(second)
-            }
-            if (sign == '-') {
-                Number(first) - Number(second)
-            }
-
-            if (sign == '/') {
-                Number(first) / Number(second)
-            }
-
-            if (sign == '%') {
-                Number(first) % Number(second)
-            }
-
-
-         }
-*/
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-<script>
-
-
-   
-    // var first = '';
-    // var sign = '';
-    // var second = '';
-    // var ans = '';
-
-    // function kosi(val) {
-    //     if (first != '' && sign != '') {
-
-    //         second += val;
-    //     }
-    //     input.value += val
-    // }
-    // function opera(opp) {
-    //     if (input.value == '' && opp != "-") {
-    //         return
-    //     }
-    //     else if (input.value == '-') {
-    //         return
-    //     }
-    //     first = input.value;
-    //     sign = opp;
-    //     input.value += opp;
-
-    // }
-    // function del() {
-    //    var a=input.value; 
-    //    var b=a.slice(0,-1); 
-    //   input.value=b
-
-    // }
-    // function eq() {
-    //     if (sign == '+') {
-    //         ans = Number(first) + Number(second)
-    //     }
-
-    //     else if (sign == '-') {
-    //         ans = Number(first) - Number(second)
-    //     }
-
-    //     else if (sign == '✖') {
-    //         ans = Number(first) * Number(second)
-    //     }
-
-    //     else if (sign == '') {
-    //         ans = Number(first) / Number(second)
-    //     }
-    //     else if (sign == '%') {
-    //         ans = Number(first) % Number(second)
-    //     }
-
-
-
-
+    // <script>
 
     //     second = "";
     //     input.value = ans
@@ -321,7 +267,7 @@
        
     // }
 
-
+// </script>
     // ARRAY METHODS
     // *array.push('baby') simply means you are adding to the array from the right hand side
        /* array.splice (1,2) simply looks exactly like slice
@@ -338,7 +284,7 @@
  //   POP (OPPOSITE) = SHIFT
  //   PUSH (OPPOSITE) = UNSHIFT
 
-
+// <script>
 
     //     var bal=input2.value;
     //         bal=bal.replace('shit','')
@@ -371,11 +317,4 @@
     // input.value=''
 
     // }
-
-
-
-
-//<!-- ASSIGNMENT -->
-// <!-- 1. WHAT IS A LOOP -->
-// <!-- 2. WHAT IS FOR LOOP -->
-// <!-- 3. HOW CAN WE USE A FORLOOP OR HOW IT CAN BE USED  -->
+// </script>

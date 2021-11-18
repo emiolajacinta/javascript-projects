@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>index</title>
+</head>
+<body>
+    
+    <button onclick="fetch_me()">GET ALL USERS</button>
+
+    <script>
+        $(function(){
+            let promise = new promise((resolve,reject)=>{
+                return resolve('Hello Children')
+            })
+            promise.then((success)=>{
+               alert('Successful')
+            }
+            // (error)=>{
+            //   alert('Error')
+            // }
+            ).catch((error)=>alert()).finally(()=>{alert('Anyone')})
+        })
+        // function fetch_me(){
+        //     var foundTrue=[{}];
+        //     var foundFalse=[{}];
+        //     let kosi = {
+        //         name:'kosisochukwu',status:true,score:200
+        //     }
+        //     fetch('https://jsonplaceholder.typicode.com/todos',{
+        //         method:'GET'
+        //     }).then(res =>{
+        //         return res.json()
+        //     }).then(function(data){
+        //         data.forEach(element => {
+        //             if(element.completed==true){
+        //                 foundTrue.push(element)
+        //             }
+        //             else if(element.completed==false){
+        //                 foundFalse.push(element)
+        //             }
+                    
+        //         });
+        //         console.log(foundTrue);
+        //         console.log(foundFalse);
+        //     })
+        // }
+
+    </script>
+</body>
+</html>
